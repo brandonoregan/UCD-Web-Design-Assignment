@@ -1,0 +1,361 @@
+:root {
+    
+    /* Colors */
+
+    --maroon: #83003f;
+    --blue: #073671;
+    --black: #000000;
+    --soft-black: #232b2b;
+    --white: #FFFFFF;
+
+    /* font-family */
+
+    --ff: 'Roboto', sans-serif;
+
+    /* font-weight */
+
+    --fw-400: 400; 
+    --fw-700: 700;
+    --fw-900: 900;
+
+    /* font-size */
+
+    /* Burger-menu custom variables */
+    --bar-width: 4.5rem;
+    --bar-height: .4rem;
+    --burger-gap: .6rem;
+    --burger-margin: 1rem;
+    --burger-height: calc(var(--bar-height) * 3 + var(--burger-gap) * 2);
+
+    --animation-timing: 200ms ease-in-out;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* TODO - Check what this means exactly  */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}  
+
+/* MY CODING */
+/* MY CODING */
+/* MY CODING */
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--ff);
+    padding-top: calc(var(--burger-height));
+    color: var(--white);
+}
+
+  /* NAV BAR - LOGO BANNER SECTION*/
+
+.flex-nav {
+display: none;
+}
+
+.nav-lis {
+    color: var(--white);
+    font-family: var(--ff);
+    font-size: 2.5rem;
+    font-weight: var(--fw-700);
+    letter-spacing: 1px;;
+}
+
+.nav-logo {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-top: .7rem;
+    margin-left: 2rem;
+}
+
+.burger-nav {
+  background-color: var(--black);
+  height: calc(var(--burger-height) + 2rem);
+
+}
+
+/* Burger Menu section */
+
+header {
+    height: calc(var(--burger-height) + 2rem);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.burger-menu {
+    --x-width: calc(var(--burger-height) * 1.41421356237
+    );
+    display: flex;
+    flex-direction: column;
+    gap: var(--burger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--burger-margin);
+    right:var(--burger-margin);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu input {
+    content: " ";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--white);
+    border-radius: 25px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(animation-timing), translate var(--animation-timing), background-color var(--animation-timing); 
+}
+
+.burger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+    background-color: var(--white);
+}
+
+.burger-menu:has(input:checked)::after{
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+    background-color: var(--white);
+
+}
+
+.burger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.burger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.menu-sidebar {
+    translate: -100%;
+    transition: var(--animation-timing);
+    position: absolute;
+    padding-left: 3rem;
+    padding-top: 5rem;
+    background-color: var(--soft-black);
+    color: var(--white);
+    width: 100%;    
+    min-height: 100vh;
+}
+
+.burger-menu:has(input:checked) + .menu-sidebar {
+    translate: 0;
+}
+
+/* MAIN CSS */
+
+ main {
+  background-color: var(--soft-black);
+  /* padding-top: 4.4rem;
+  TODO why is the header width, 44px but only takes main 20px to clear past it?  */
+ }
+
+.about {
+  background-color: var(--soft-black);
+  padding-top: 4.4rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 375px;
+  border: solid 2px black;
+  margin-inline: auto;
+  text-align: center;
+}
+
+a {
+  color: var(--white);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.home-bg {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: var(--soft-black);
+    /* background-image: url(/images/state-of-origin-2018.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: scale-down; */
+}
+
+.hero-text {
+  color: var(--white);
+  text-align: center;
+  padding: 10rem 1rem;
+}
+
+.hero-text > span {
+  text-transform: uppercase;
+  display: block;
+  color: gold;
+}
+
+.about-img {
+  display: inline-block;
+  width: 70%;
+  height: 300px;
+  border: 4px solid gold;
+}
+
+
+
+
+
+
+
+
+
+.footer-flex {
+  padding: 1rem;;
+}
+
+.footer-flex img {
+margin: 0 auto;
+}
+
+.footer-flex p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-flex ul {
+  display: flex;
+  justify-content: space-around;
+  width: 65%;
+  margin: 0 auto;
+}
+
+/* .footer-flex ul li {
+  margin-left: 3rem;
+} */
+
+
+
+/* USE for DESKTOP
+
+
+
+.footer-flex ul li {
+  margin-left: 4rem;
+} */
+
+
+table {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.qld {
+  background-color: var(--maroon);
+}
+
+.nsw {
+  background-color: var(--blue);
+}
+
+.form {
+  background-color: var(--soft-black);
+}
+
+footer {
+  background-color: var(--black);
+}
