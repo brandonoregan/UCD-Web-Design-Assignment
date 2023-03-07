@@ -8,6 +8,7 @@
     --soft-black: #232b2b;
     --white: #FFFFFF;
     --silver:  #BBC2CC;
+    --gold: gold;
 
     --black-gradient-top-down: linear-gradient(var(--black)70%, var(--soft-black));
     --black-gradient-bottom-up:  linear-gradient(to top, var(--black)70%, var(--soft-black)); 
@@ -126,7 +127,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: var(--ff);
+    font-family: var(--ff-roboto);
     padding-top: calc(var(--burger-height));
     color: var(--white);
     min-height: 100vh;
@@ -199,14 +200,14 @@ header {
     rotate: 45deg;
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / -2);
-    background-color: var(--white);
+    background-color: var(--gold);
 }
 
 .burger-menu:has(input:checked)::after{
     rotate: -45deg;
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / 2);
-    background-color: var(--white);
+    background-color: var(--gold);
 
 }
 
@@ -242,6 +243,8 @@ header {
 
 /* MAIN CSS */
 
+/* COMMON STYLES */
+
 .container {
   width: 90%;
   max-width: 375px;
@@ -264,68 +267,15 @@ a {
   text-decoration: none;
 }
 
+.bg {
+  min-width: 100%;
+}
+
+
 a:hover {
   cursor: pointer;
-  
-}
-
-.hero-text {
-  color: var(--white);
-  text-align: center;
-  padding: 5rem 2rem;
-}
-
-.hero-text h1 {
-  letter-spacing: 4px;
-  font-family: var(--ff-roboto);
-  font-weight: var(--fw-900);
-  padding-top: 34rem;
   color: gold;
-  text-transform: uppercase;
-  line-height: 45px;
 }
-
-.hero-text h2 {
-  font-size: 1.5rem;
-  font-family: var(--ff-roboto);
-  color: var(--silver);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border-bottom: 3px solid var(--white);
-}
-
-.hero-text h1 span {
-  display: block;
-  font-size: 2rem;
-  line-height: 8px;
-}
-
-.bg {
-    min-width: 100%;
-}
-
-
-
-.about-img {
-  display: inline-block;
-  width: 70%;
-  height: 300px;
-  border: 4px solid gold;
-}
-
-iframe {
-  height: 300px;
-  width: 300px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: block;
-}
-
-
-
-
-
-
 
 footer {
   background-image: var(--black-gradient-bottom-up);
@@ -351,6 +301,8 @@ footer {
   justify-content: space-around;
   margin: 0 auto;
   color: silver;
+  opacity: .7;
+  text-transform: uppercase;
 }
 
 .footer-flex ul li {
@@ -358,36 +310,50 @@ footer {
   font-size: 1.3rem;
 }
 
-/* .footer-flex img {
-margin: 0 auto;
-}
 
-.footer-flex p {
+/* HOME PAGE STYLES */
+
+.hero-text {
+  color: var(--white);
   text-align: center;
-  padding: 1rem;
+  padding: 5rem 2rem;
 }
 
-.footer-flex ul {
-  display: flex;
-  justify-content: space-around;
-  width: 65%;
-  margin: 0 auto;
-} */
-
-
-
-
-
-/* USE for DESKTOP
-
-
-
-.footer-flefooter {
-  background-color: var(--black);
+.hero-text h1 {
+  letter-spacing: 4px;
+  font-family: var(--ff-roboto);
+  font-weight: var(--fw-900);
+  padding-top: 40rem;
+  color: gold;
+  text-transform: uppercase;
+  line-height: 45px;
+  text-shadow: 2px 2px --black;
 }
-x ul li {
-  margin-left: 4rem;
-} */
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  font-family: var(--ff-roboto);
+  color: var(--white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--white);
+}
+
+.hero-text h1 span {
+  display: block;
+  font-size: 2rem;
+  line-height: 8px;
+}
+
+/* ABOUT PAGE STYLES */
+
+.about-img {
+  display: inline-block;
+  width: 70%;
+  height: 300px;
+  border: 4px solid gold;
+}
+
 
 
 table {
@@ -399,11 +365,11 @@ table {
   background-color: var(--maroon);
 }
 
-.nsw {
-  background-color: var(--blue);
-}
 
-.form {
-  background-color: var(--soft-black);
+iframe {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: block;
 }
-
