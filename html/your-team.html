@@ -29,8 +29,8 @@
                 <ul class="nav-lis">
                     <li>Home</li>
                     <li>About</li>
+                    <li>Your Team</li>
                     <li>Queensland</li>
-                    <li>Vote</li>
                 </ul> 
             </div>
         </nav>
@@ -45,31 +45,39 @@
                     <ul class="nav-lis">
                         <li><a href="/html/home.html">Home</a></li>
                         <li><a href="/html/about.html">About</a></li>
+                        <li><a href="/html/your-team.html">Your Team</a></li>
                         <li><a href="/html/qld.html">Queensland</a></li>
-                        <li><a href="/html/form.html">Form</a></li>
                     </ul>
                 </nav>
             </aside>
         </div>
     </header>
     <main>
-        <section id="form">
             <div class="form-bg">
-                <div class="container">
+                <div class="container container-bg-2">
                     <!-- check what is needed from assignment sheet. -->
                     <form action="results.html" method="get">
 
-                        <fieldset>
-                            <legend>Enter You G.T.O.A.T</legend>
-                            <table>
+                            <h1 class="table-heading"><span>Enter Your</span> G.T.O.A.T</h1>
+                            <table class="team-table">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <td></td>
                                         <th>Position</th>
                                         <th>Player</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <label for="position-coach">Coach
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text"id="position-coach" name="position-coach" required min="5" max="50">
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <th>1</th>
                                         <td>
@@ -238,55 +246,36 @@
                                             <input type="text"id="position-17" name="position-17" required min="5" max="50">
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <label for="position-coach">Coach
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <input type="text"id="position-coach" name="position-coach" required min="5" max="50">
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
-                        </fieldset>
 
 
 
-                        <fieldset>
-                            <legend>Enter your information to submit your vote.</legend>
-                            <div class="name">
-                                <label for="name">Name:</label>
-                                <input id="name" name="name" type="text" required placeholder="Insert Name Here">
+                            <div class="information-form-section">
+                                <h4>ENTER YOUR INFORMATION TO SUBMIT YOUR TEAM.</h4>
+                                <div class="name">
+                                    <label for="name">Name:</label>
+                                    <input id="name" name="name" type="text" required placeholder="Insert Name Here">
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email:</label>
+                                    <input id="email" name="email type="text" required placeholder="Insert Email Here">
+                                </div>
+                                <div>
+                                    <label for="age">Age:</label>
+                                    <input type="number" name="age" id="age" required min="5" max="200" placeholder="5+">
+                                </div>
+                                <button type="submit">Submit</button>
                             </div>
-                            <div class="email">
-                                <label for="email">Email:</label>
-                                <input id="email" name="email type="text" required placeholder="Insert Email Here">
-                            </div>
-                            <div>
-                                <label for="team">Team</label>
-                                <select required name="team" id="team">
-                                    <option value="qld">Queensland</option>
-                                    <option value="nsw">New South Wales</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="age">Age:</label>
-                                <input type="number" name="age" id="age" required min="5" max="200" step="5">
-                            </div>
-                            <button type="submit">Submit</button>
-                        </fieldset>
                         
                     </form>
                 </div>
             </div>
-        </section>
     </main>
     <footer>
         <div class="footer-flex">
-            <img src="/images/logo-svg-small.png" alt="logo">
-            <p>Copyright &copy; 2023 G.T.O.A.T </p>
+            <a href="/html/home.html"><img src="/images/logo-svg-small.png" alt="logo"></a>
+            <p>Copyright &copy; <br> 2023 G.T.O.A.T </p>
             <ul>
                 <li><a href="mailto:brandon_oregan97@hotmail.com">Contact</a></li>
                 <li><a href="#top">Back to top</a></li>

@@ -10,8 +10,14 @@
     --silver:  #BBC2CC;
     --gold: gold;
 
+    --op-maroon: hsla(331, 100%, 56%, .2);
+
+
+
     --black-gradient-top-down: linear-gradient(var(--black)70%, var(--soft-black));
     --black-gradient-bottom-up:  linear-gradient(to top, var(--black)70%, var(--soft-black)); 
+   
+    --bg-gradient: linear-gradient(var(--black), var(--op-maroon)50%, var(--black)100%);
 
     /* font-family */
 
@@ -123,6 +129,8 @@ select {
 html {
     font-size: 62.5%;
     background-color: var(--soft-black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 body {
@@ -144,7 +152,6 @@ display: none;
     font-family: var(--ff-roboto);
     font-size: 2.5rem;
     font-weight: var(--fw-700);
-    letter-spacing: 1px;;
 }
 
 .nav-logo {
@@ -254,13 +261,8 @@ header {
   margin-top: 3rem;
   margin-bottom: 1rem;
   border-radius: 2rem;
-  background-image: url(/images/bg-tile-option-1.jpg);
-  background-color: ma;
-  background-size: contain;
-  background-position-x: center;
-  background-position-y: top;
-  min-height: 100vh;
 }
+
 
 a {
   color: var(--white);
@@ -291,27 +293,35 @@ footer {
 }
 
 .footer-flex p {
-  font-size: 1rem;
+  font-size: .7rem;
   color: silver;
   margin-left: 1rem;
 }
 
 .footer-flex ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 auto;
   color: silver;
   opacity: .7;
-  text-transform: uppercase;
 }
 
 .footer-flex ul li {
-  margin-left: 2rem;
-  font-size: 1.3rem;
+  margin-left: 1rem;
+  font-size: 1rem;
 }
 
 
 /* HOME PAGE STYLES */
+
+.home-container-bg {
+  background-image: url(/images/bg-tile-option-1.jpg);
+  background-color: var(--maroon);
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: top;
+  min-height: 100vh;
+}
 
 .hero-text {
   color: var(--white);
@@ -325,17 +335,12 @@ footer {
   font-weight: var(--fw-900);
   padding-top: 40rem;
   color: gold;
-  text-transform: uppercase;
   line-height: 45px;
   text-shadow: 2px 2px --black;
 }
 
-.hero-text h2 {
+ h2 {
   font-size: 1.5rem;
-  font-family: var(--ff-roboto);
-  color: var(--white);
-  letter-spacing: 2px;
-  text-transform: uppercase;
   border-bottom: 3px solid var(--white);
 }
 
@@ -347,23 +352,156 @@ footer {
 
 /* ABOUT PAGE STYLES */
 
+.about-container-bg {
+  background-image: var(--bg-gradient);
+  background-color: ma;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  min-height: 100vh;
+}
+
 .about-img {
   display: inline-block;
   width: 70%;
   height: 300px;
-  border: 4px solid gold;
+  border-radius: 3rem;
+  border: 1px solid var(--white);
+  margin-top: 1rem;
+}
+
+figcaption {
+  padding: 0;
+  margin: 0;
+  color: silver;
+  opacity: .6;
+  font-size: 1rem;
 }
 
 
+/* YOUR TEAM SECTION */
 
-table {
+
+.container-bg-2 {
+  background-image: var(--bg-gradient);
+  background-color: var(--soft-black);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  min-height: 100vh;
+}
+
+.table-heading {
+  color: var(--gold);
+}
+
+.table-heading span {
+  font-size: 2.2rem;
+}
+
+.team-table {
+  border-collapse: collapse;
   text-align: left;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  min-width: 300px;
+  border-radius: .4rem;
+  overflow: hidden;
+}
+
+.team-table thead tr {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.team-table thead tr th {
+  padding-bottom: 0.5rem;
+  padding-top: .5rem;
+}
+
+.team-table tr {
+  padding: 1rem 0;
+}
+
+.team-table tr:nth-last-of-type(odd) {
+  background-color: hsla(331, 100%, 26%, 0.4);
+}
+
+.team-table tr:nth-last-of-type(even) {
+  background-color: hsla(331, 100%, 26%, 0.6);
+}
+
+.team-table tbody tr th {
+  text-align: center;
+  padding-right: 1rem;
+  color: var(--gold);
+}
+
+.team-table tbody tr td:nth-child(2) {
+  padding-right: 1rem;
+}
+
+.team-table tbody tr td input[type="text"] {
+  width: 100%;
+  max-width: 25rem;
+}
+
+.information-form-section {
+  max-width: 80%;
   margin: 0 auto;
 }
 
-.qld {
-  background-color: var(--maroon);
+.information-form-section div {
+  padding: .2rem 0; 
 }
+
+.information-form-section div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.information-form-section h4 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+button {
+  margin: 1rem auto;
+  padding: 3px 0;
+  width: 100%;
+  font-family: var(--ff-roboto);
+  font-weight: var(--fw-900);
+  letter-spacing: 2px;
+  background-color: var(--maroon);
+  color: var(--white);
+  border: none;
+  border-radius: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 5px var(--white);
+}
+
+
+/* QUEENSLAND TEAM SECTION */
+
+.qld-team-heading {
+  padding-top: 1rem;
+  line-height: 3rem;
+  color: var(--gold);
+}
+
+.qld-team-table {
+  min-height: 100vh; 
+  margin-bottom: 3rem;
+  width: 80%;
+}
+
+.qld-team-table tbody tr {
+  padding-top: 3rem;
+}
+
 
 
 iframe {
