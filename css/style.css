@@ -21,7 +21,7 @@
 
     /* font-family */
 
-    --ff-roboto: 'Roboto', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif, Arial;
 
     /* font-weight */
 
@@ -263,6 +263,10 @@ header {
   border-radius: 2rem;
 }
 
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 3px solid var(--white);
+}
 
 a {
   color: var(--white);
@@ -290,6 +294,8 @@ footer {
   align-items: center;
   justify-content: center;
   margin-left: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .footer-flex p {
@@ -301,9 +307,9 @@ footer {
 .footer-flex ul {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
   color: silver;
   opacity: .7;
+  margin-left: 5rem;
 }
 
 .footer-flex ul li {
@@ -339,11 +345,6 @@ footer {
   text-shadow: 2px 2px --black;
 }
 
- h2 {
-  font-size: 1.5rem;
-  border-bottom: 3px solid var(--white);
-}
-
 .hero-text h1 span {
   display: block;
   font-size: 2rem;
@@ -354,29 +355,91 @@ footer {
 
 .about-container-bg {
   background-image: var(--bg-gradient);
-  background-color: ma;
   background-size: cover;
   background-position-x: center;
   background-position-y: top;
   min-height: 100vh;
 }
 
-.about-img {
-  display: inline-block;
-  width: 70%;
-  height: 300px;
-  border-radius: 3rem;
-  border: 1px solid var(--white);
-  margin-top: 1rem;
+.about-container-bg p {
+  padding: 4rem 0 1rem 0 ;
+  border-top: 3px solid var(--white);
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 700;
 }
 
-figcaption {
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: center;
+  margin: 2rem 0;;
+  gap: 2rem;
+}
+
+.grid-item-1 {
+  height: 100px;
+  width: 100px;
+  background-image: url(/images/grid-img-1.jpg);
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 1rem;
+  border: 1px solid var(--gold);
+  box-shadow: 0px 0px 6px var(--gold);
+}
+
+.grid-item-2 {
+  height: 100px;
+  width: 100px;
+  background-image: url(/images/grid-img-2.jpg);
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 1rem;
+  border: 1px solid var(--gold);
+  box-shadow: 0px 0px 6px var(--gold);
+}
+
+.grid-item-3 {
+  height: 100px;
+  width: 100px;
+  background-image: url(/images/grid-img-3.jpg);
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 1rem;
+  border: 1px solid var(--gold);
+  box-shadow: 0px 0px 6px var(--gold);
+}
+
+.grid-item-4 {
+  height: 100px;
+  width: 100px;
+  background-image: url(/images/grid-img-4.jpg);
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 1rem;
+  border: 1px solid var(--gold);
+  box-shadow: 0px 0px 6px var(--gold);
+}
+
+.about-img:hover {
+  background-image: url(/images/logo-svg-large.png);
+  background-size: cover;
+  transition-duration: 300ms;
+  background-color: var(--gold);
+}
+
+
+
+
+
+
+/* figcaption {
   padding: 0;
   margin: 0;
   color: silver;
   opacity: .6;
   font-size: 1rem;
-}
+} */
 
 
 /* YOUR TEAM SECTION */
@@ -465,7 +528,7 @@ figcaption {
   padding: 1rem 0;
 }
 
-button {
+.btn-2 {
   margin: 1rem auto;
   padding: 3px 0;
   width: 100%;
