@@ -136,25 +136,70 @@ html {
 body {
     font-size: 1.6rem;
     font-family: var(--ff-roboto);
-    padding-top: calc(var(--burger-height));
+    /* BURGER MENU PADDING */
+    /* padding-top: calc(var(--burger-height)); */
     color: var(--white);
     min-height: 100vh;
+    position: relative;
 }
 
   /* NAV BAR - LOGO BANNER SECTION*/
 
-.flex-nav {
+/* .flex-nav {
 display: none;
+} */
+
+header {
+  position: sticky;
+  height: 4.4rem;
+  background-image: var(--black-gradient-top-down);
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
 }
 
-.nav-lis {
+.flex-nav-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.flex-nav-ul {
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.flex-nav-ul li + li:before {
+  content: "|";
+  padding: .7rem;
+}
+
+
+
+/* Burger Menu section */
+
+/* Burger Header */
+/* header {
+    height: calc(var(--burger-height) + 2rem);
+    position: fixed;
+    width: 100%;
+    top: 0;
+} */
+
+.burger-nav, .burger-menu, .menu-sidebar, .burger-nav-lis, .burger-nav-logo  {
+  display: none;
+}
+
+.burger-nav-lis {
     color: var(--white);
     font-family: var(--ff-roboto);
     font-size: 2.5rem;
     font-weight: var(--fw-700);
 }
 
-.nav-logo {
+.burger-nav-logo {
     display: inline-block;
     height: 30px;
     width: 30px;
@@ -166,15 +211,6 @@ display: none;
   background-image: var(--black-gradient-top-down);
   height: calc(var(--burger-height) + 2rem);
 
-}
-
-/* Burger Menu section */
-
-header {
-    height: calc(var(--burger-height) + 2rem);
-    position: fixed;
-    width: 100%;
-    top: 0;
 }
 
 .burger-menu {
@@ -258,7 +294,7 @@ header {
   border: solid 2px black;
   margin-inline: auto;
   text-align: center;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   margin-bottom: 1rem;
   border-radius: 2rem;
 }
