@@ -176,6 +176,10 @@ header {
   padding: .7rem;
 }
 
+.flex-nav-logo {
+  height: 2.5em;
+  padding: .5rem 0 0 1rem;
+}
 
 
 /* Burger Menu section */
@@ -317,6 +321,25 @@ a {
 a:hover {
   cursor: pointer;
   color: gold;
+}
+
+
+.btn-2 {
+  margin: 1rem auto;
+  padding: 3px 0;
+  width: 100%;
+  font-family: var(--ff-roboto);
+  font-weight: var(--fw-900);
+  letter-spacing: 2px;
+  background-color: var(--maroon);
+  color: var(--white);
+  border: none;
+  border-radius: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 5px var(--white);
 }
 
 footer {
@@ -564,23 +587,6 @@ footer {
   padding: 1rem 0;
 }
 
-.btn-2 {
-  margin: 1rem auto;
-  padding: 3px 0;
-  width: 100%;
-  font-family: var(--ff-roboto);
-  font-weight: var(--fw-900);
-  letter-spacing: 2px;
-  background-color: var(--maroon);
-  color: var(--white);
-  border: none;
-  border-radius: 2px;
-}
-
-button:hover {
-  cursor: pointer;
-  box-shadow: inset 0px 0px 5px var(--white);
-}
 
 
 /* QUEENSLAND TEAM SECTION */
@@ -601,12 +607,43 @@ button:hover {
   padding-top: 3rem;
 }
 
+/* MEDIA QUERIES */
 
+@media (min-width: 900px) {
 
-iframe {
-  height: 300px;
-  width: 300px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: block;
+  .home-container-bg {
+    background-image: url(/images/bg-tile-option-1.jpg);
+    background-color: var(--maroon);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 375px;
+    border: solid 2px black;
+    margin-inline: auto;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+  }
+
+  .container-bg-2 {
+    background-image: var(--bg-gradient);
+    background-color: var(--soft-black);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    min-height: 100vh;
+  }
+
+  .panel {
+    width: 90%;
+    max-width: 375px;
+    border: solid 2px black;
+  }
+
 }
