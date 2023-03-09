@@ -624,11 +624,13 @@ footer {
     width: 90%;
     max-width: 375px;
     border: solid 2px black;
-    margin-inline: auto;
+    /* margin-inline: auto; */
+    justify-self: center;
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 1rem;
     border-radius: 2rem;
+    box-shadow: 0 0 15px var(--gold);
   }
 
   .container-bg-2 {
@@ -640,10 +642,35 @@ footer {
     min-height: 100vh;
   }
 
+  .flex {
+    display: flex;
+  }
+
   .panel {
     width: 90%;
-    max-width: 375px;
+    max-width: 275px;
     border: solid 2px black;
+    background-image: url(/images/bg-tile-option-1.jpg);
+    background-color: var(--maroon);
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+    min-height: 100vh;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+  }
+
+  .panel-left {
+    margin-left: -5rem;
+  }
+
+  .panel-right {
+    margin-right: -5rem;
+  }
+
+  .panel-left:hover, .panel-right:hover {
+    box-shadow: 0 0 15px var(--gold);
   }
 
 }
