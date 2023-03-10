@@ -493,10 +493,6 @@ footer {
 }
 
 
-
-
-
-
 /* figcaption {
   padding: 0;
   margin: 0;
@@ -639,6 +635,20 @@ footer {
     
   }
 
+  .btn-2 {
+    font-size: 2rem;
+    margin: 1rem auto;
+    padding: 3px 0;
+    width: 100%;
+    font-family: var(--ff-roboto);
+    font-weight: var(--fw-900);
+    letter-spacing: 2px;
+    background-color: var(--maroon);
+    color: var(--white);
+    border: none;
+    border-radius: 2px;
+  }
+
   .home-container-bg {
     background-image: var(--bg-gradient);
     background-repeat: no-repeat;
@@ -655,8 +665,9 @@ footer {
 
   .home-hero-text h1 {
     font-size: 5rem;
-    padding-top: 2rem;  
+    padding-top: 15rem;  
     line-height: 7.5rem;
+    text-shadow: 0 0 7px var(--gold);
   }
 
   .container-bg-2 {
@@ -672,13 +683,13 @@ footer {
 
   .flex {
     display: flex;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
   }
 
   .panel {
     width: 90%;
-    max-width: 300px;
+    min-width: 300px;
     border: solid 2px black;
     background-image: url(/images/qld-tile-bg.jpg);
     background-color: var(--maroon);
@@ -694,6 +705,7 @@ footer {
   .panel-left {
     margin-left: 2rem;
     background-image: url(/images/bg-tile-option-1.jpg);
+    background-position: ;
   }
 
   .panel-right {
@@ -723,7 +735,7 @@ footer {
     position: relative;
     width: 100%;
     height: 100%;
-  
+    margin: auto;
   }
 
   .tile-grid-right {
@@ -733,7 +745,6 @@ footer {
     z-index: 10;
     column-gap: 3rem;
     row-gap: 4rem;
-    overflow: hidden;
     margin-top: 6rem;
     margin: 5rem;
   }
@@ -745,7 +756,6 @@ footer {
     z-index: 10;
     column-gap: 3rem;
     row-gap: 4rem;
-    overflow: hidden;
     margin-top: 6rem;
     direction: rtl;
     right: 0;
@@ -755,7 +765,7 @@ footer {
   .grid-item-5 {
     height: 100px;
     width: 100px;
-    background-image: url(/images/logo-svg-small.png);
+    background-image: url(/images/grid-img-1.jpg);
     background-size: cover;
     background-position-x: center;
     border-radius: 1rem;
@@ -765,9 +775,32 @@ footer {
   .grid-item-5:hover {
     border: 1px solid var(--gold);
     box-shadow: 0px 0px 6px var(--gold);
-    background-image: url(/images/grid-img-1.jpg);
     transition: 200ms;
+    background-color: var(--gold);
+    background-image: url(/images/logo-svg-small.png);
+    box-shadow: 0 0 10px var(--gold);
   }
+
+  .grid-item-img-1 {background-image: url(/images/grid-item-img-1.jpg);}
+  .grid-item-img-2 {
+    background-image: url(/images/grid-img-2.jpg);
+  }
+  .grid-item-img-3 {background-image: url(/images/grid-item-img-3.jpg);}
+  .grid-item-img-4 {background-image: url(/images/grid-item-img-4.jpg);}
+  .grid-item-img-5 {background-image: url(/images/grid-item-img-5.jpg);}
+  .grid-item-img-6 {background-image: url(/images/grid-item-img-6.jpg);}
+  .grid-item-img-7 {background-image: url(/images/grid-item-img-7.jpg);}
+  .grid-item-img-8 {background-image: url(/images/grid-item-img-8.jpg);}
+  .grid-item-img-9 {background-image: url(/images/grid-item-img-9.jpg);}
+  .grid-item-img-10 {background-image: url(/images/grid-item-img-10.jpg);}
+  .grid-item-img-11 {background-image: url(/images/grid-item-img-11.jpg);}
+  .grid-item-img-12 {background-image: url(/images/grid-item-img-12.jpg);}
+  .grid-item-img-13 {background-image: url(/images/grid-item-img-13.jpg);}
+  .grid-item-img-14 {background-image: url(/images/grid-item-img-14.jpg);}
+  .grid-item-img-15 {background-image: url(/images/grid-item-img-15.jpg);}
+  .grid-item-img-16 {background-image: url(/images/grid-item-img-16.jpg);}
+  .grid-item-img-17 {background-image: url(/images/grid-item-img-17.jpg);}
+  .grid-item-img-18 {background-image: url(/images/grid-item-img-18.jpg);}
 
   .about-panel {
     width: 90%;
@@ -790,6 +823,16 @@ footer {
   font-size: 1.5rem;
   color: var(--white);
   font-weight: 700;
+}
+
+.about-hero-text h2 {
+  padding: rem;
+  font-size: 3rem;
+}
+
+.about-hero-text p {
+  padding-top: 2rem;
+  font-size: 3rem;
 }
 
 
