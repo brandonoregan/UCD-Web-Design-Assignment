@@ -387,7 +387,7 @@ footer {
 /* HOME PAGE STYLES */
 
 .home-container-bg {
-  background-image: url(../../images/bg-tile-option-1.jpg);
+  background-image: url(../images/bg-tile-option-1.jpg);
   background-color: var(--maroon);
   background-size: contain;
   background-position-x: center;
