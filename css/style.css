@@ -603,7 +603,8 @@ aside {
   }
 
   .panel:hover {
-    background-image: url(../images/bg-tile-option-3.jpg)
+    background-image: url(../images/bg-tile-option-3.jpg);
+    transition-duration: 900ms;
   }
 
   .home-jt-img {
