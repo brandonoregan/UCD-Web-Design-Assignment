@@ -3,13 +3,11 @@
     /* Colors */
 
     --maroon: #83003f;
-    --blue: #073671;
     --black: #000000;
     --soft-black: #232b2b;
     --white: #FFFFFF;
     --silver:  #BBC2CC;
     --gold: gold;
-
     --op-maroon: hsla(331, 100%, 56%, .2);
 
 
@@ -31,12 +29,7 @@
 
     /* font-size */
 
-    /* Burger-menu custom variables */
-    --bar-width: 3rem;
-    --bar-height: .4rem;
-    --burger-gap: .4rem;
-    --burger-margin: .7rem;
-    --burger-height: calc(var(--bar-height) * 3 + var(--burger-gap) * 2);
+
 
     /* Timing functino */
     --animation-timing: 200ms ease-in-out;
@@ -102,8 +95,6 @@ select {
   font: inherit;
 }
 
-/* TODO - Check what this means exactly  */
-
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -121,10 +112,6 @@ select {
 
 }  
 
-/* MY CODING */
-/* MY CODING */
-/* MY CODING */
-
 
 html {
     font-size: 62.5%;
@@ -136,26 +123,19 @@ html {
 body {
     font-size: 1.6rem;
     font-family: var(--ff-roboto);
-    /* BURGER MENU PADDING */
-    /* padding-top: calc(var(--burger-height)); */
     color: var(--white);
     min-height: 100vh;
     position: relative;
-
 }
 
   /* NAV BAR - LOGO BANNER SECTION*/
 
-/* .flex-nav {
-display: none;
-} */
 
 header {
   position: sticky;
   height: 4.4rem;
   background-image: var(--black-gradient-top-down);
   width: 100%;
-
   margin: 0;
   padding: 0;
 }
@@ -183,115 +163,8 @@ header {
 }
 
 
-/* Burger Menu section */
-
-/* Burger Header */
-/* header {
-    height: calc(var(--burger-height) + 2rem);
-    position: fixed;
-    width: 100%;
-    top: 0;
-} */
-
-.burger-nav, .burger-menu, .menu-sidebar, .burger-nav-lis, .burger-nav-logo  {
-  display: none;
-}
-
-.burger-nav-lis {
-    color: var(--white);
-    font-family: var(--ff-roboto);
-    font-size: 2.5rem;
-    font-weight: var(--fw-700);
-}
-
-.burger-nav-logo {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    margin-top: .7rem;
-    margin-left: 2rem;
-}
-
-.burger-nav {
-  background-image: var(--black-gradient-top-down);
-  height: calc(var(--burger-height) + 2rem);
-
-}
-
-.burger-menu {
-    --x-width: calc(var(--burger-height) * 1.41421356237
-    );
-    display: flex;
-    flex-direction: column;
-    gap: var(--burger-gap);
-    width: max-content;
-    position: absolute;
-    top: var(--burger-margin);
-    right:var(--burger-margin);
-    z-index: 3;
-    cursor: pointer;
-}
-
-.burger-menu::before,
-.burger-menu::after,
-.burger-menu input {
-    content: " ";
-    width: var(--bar-width);
-    height: var(--bar-height);
-    background-color: silver;
-    border-radius: 25px;
-    transform-origin: left center;
-    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(animation-timing), translate var(--animation-timing), background-color var(--animation-timing); 
-}
-
-.burger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2);
-    background-color: var(--gold);
-}
-
-.burger-menu:has(input:checked)::after{
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
-    background-color: var(--gold);
-
-}
-
-.burger-menu input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
-}
-
-.burger-menu input:checked {
-    opacity: 0;
-    width: 0;
-}
-
-.menu-sidebar {
-    translate: -100%;
-    transition: var(--animation-timing);
-    position: absolute;
-    padding-left: 3rem;
-    padding-top: 5rem;
-    background-color: var(--soft-black);
-    color: var(--white);
-    width: 100%;    
-    min-height: 100vh;
-    z-index: 5;
-}
-
-.burger-menu:has(input:checked) + .menu-sidebar {
-    translate: 0;
-}
 
 /* MAIN CSS */
-
-/* COMMON STYLES */
 
 .container {
   width: 90%;
@@ -318,18 +191,31 @@ a {
   margin-top: 8px;
 }
 
-
-
-.bg {
+/* .bg {
   min-width: 100%;
-}
-
+} */
 
 a:hover {
   cursor: pointer;
   color: gold;
+  text-shadow: 0 0 5px var(--gold);
 }
 
+.btn-1 {
+  margin: 3rem auto;
+  padding: 3px 0;
+  padding-left: auto;
+  max-width: 600px;
+  width: 100%;
+  font-family: var(--ff-roboto);
+  font-weight: var(--fw-900);
+  letter-spacing: 2px;
+  background-color: var(--op-maroon);
+  color: var(--white);
+  border: var(--white);
+  border-radius: 2px;
+  letter-spacing: 4px;
+}
 
 .btn-2 {
   margin: 1rem auto;
@@ -344,7 +230,12 @@ a:hover {
   border-radius: 2px;
 }
 
-button:hover {
+.btn-2:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 5px var(--white);
+}
+
+.btn-1:hover:hover {
   cursor: pointer;
   box-shadow: inset 0px 0px 5px var(--white);
 }
@@ -366,6 +257,7 @@ footer {
 
 .footer-flex p {
   font-size: .7rem;
+  
   color: silver;
   margin-left: 1rem;
   padding: 4px;
@@ -438,7 +330,7 @@ footer {
 
 .ext-hyperlink {
   color: var(--gold);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .about-grid {
@@ -491,13 +383,6 @@ footer {
   border-radius: 1rem;
   border: 1px solid var(--gold);
   box-shadow: 0px 0px 6px var(--gold);
-}
-
-.hover-img:hover {
-  background-image: url(../images/logo-svg-large.png);
-  background-size: cover;
-  transition-duration: 300ms;
-  background-color: var(--gold);
 }
 
 .tile-grid {
