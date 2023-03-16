@@ -237,7 +237,6 @@ footer {
   background-image: var(--black-gradient-bottom-up);
 }
 
-
 .footer-flex {
   display: flex;
   padding: 1rem;
@@ -250,7 +249,6 @@ footer {
 
 .footer-flex p {
   font-size: .7rem;
-  
   color: silver;
   margin-left: 1rem;
   padding: 4px;
@@ -284,6 +282,7 @@ footer {
   color: var(--white);
   text-align: center;
   padding: 5rem 2rem;
+  opacity: .9;
 }
 
 .hero-text h1 {
@@ -534,7 +533,6 @@ aside {
   }
 
   .btn-2 {
-    font-size: 2rem;
     margin: 1rem auto;
     padding: 3px 0;
     width: 100%;
@@ -602,6 +600,7 @@ aside {
   background-image: url(../images/kp.jpeg);
   background-size: cover;
   background-position: right;
+  opacity: .6;
   }
 
 .home-panel-right {
@@ -609,6 +608,8 @@ aside {
   background-image: url(../images/dane-gagai.jpg);
   background-size: cover;
   background-position: left;
+  opacity: .6;
+
   }
 
   .panel aside {
@@ -749,6 +750,7 @@ aside {
 
 .about-container-bg p:nth-of-type(1) {
   padding-bottom: 1rem;
+  color: var(--white);
 }
 
 .about-container-bg p:nth-of-type(2) {
@@ -943,6 +945,11 @@ aside {
   flex-grow: 0;
 }
 
+.goat-panel:hover {
+  box-shadow: 0 0 15px var(--gold);
+
+}
+
 .goat-container {
   width: 90%;
   min-width: 430px;
@@ -957,6 +964,40 @@ aside {
   border-radius: 2rem;
   box-shadow: 0 0 15px var(--gold);
   flex-grow: 1;
+}
+
+.footer-flex {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-flex p {
+  font-size: 1rem;
+  color: silver;
+  margin-left: 2rem;
+  padding: 4px;
+}
+
+.email-hyperlink {
+  margin-left: 2rem;
+  padding-left: 2rem;
+}
+
+.footer-flex ul {
+  display: flex;
+  justify-content: center;
+  color: silver;
+  opacity: .7;
+  
+}
+
+.footer-flex ul li {
+  margin-left: 2rem;
+  font-size: 1rem;
 }
 
 }
